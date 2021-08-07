@@ -32,9 +32,6 @@ SetSpritePosition(2,(GetVirtualWidth()/2-GetSpriteWidth(2)/2),550)
 
 
 
-
-
-
 do
     verificarClicks()
 	
@@ -52,23 +49,7 @@ function verificarClicks()
 			if GetRawMouseLeftPressed()
 				exibirConteudo()
 			endif
-			/*
-			fundo = CreateSprite(3)
-			SetSpritePosition(fundo,0,0)
-			fundo1 = CreateSprite(4)
-			SetSpritePosition(fundo1,353,0)
-			fundo2 = CreateSprite(5)
-			SetSpritePosition(fundo2,610,0)
-			correndo = CreateSprite(7)
-			SetSpritePosition(correndo,0,418)
-			pulando = CreateSprite(8)
-			SetSpritePosition(pulando,0,470)
-			parada = CreateSprite(9)
-			SetSpritePosition(parada,0,530)
-			inimigo = CreateSprite(10)
-			SetSpritePosition(inimigo,0,605)
-			enter = CreateSprite(11)
-			SetSpritePosition(enter,0,650)*/
+
 		endif
 		
 		
@@ -83,7 +64,7 @@ function exibirConteudo()
 	DeleteImage(1)
 	DeleteImage(2)*/
 	
-	//CARREGA IMAGES DA PERSONGAGEM
+	//CARREGA IMAGES DA PERSONAGEM
 	//PULANDO
 	LoadImage(3,"jump/jump-1.png")
 	LoadImage(4,"jump/jump-2.png")
@@ -100,26 +81,21 @@ function exibirConteudo()
 	LoadImage(14,"run/run-8.png")
 	
 	
-	
-	
 	//CARREGA IMAGENS DE OUTROS SPRITES
 	LoadImage(15,"vehicles/v-police.png")
-	LoadImage(16,"fundocompletointeiro.png")
+	LoadImage(16,"fundocompleto.png")
 	
 	
 	//CRIA SPRITES DA PERSONAGEM
 	CreateSprite(3,3) //pulando
 	CreateSprite(4,7) //correndo
-	
-	
-	
+		
 	
 	//CRIA OUTROS SPRITES
 	CreateSprite(5,15)
 	createsprite(6,16)
 	
-	
-	
+		
 	//adiciona animações
 	//adicionar animações do personagem pulando
 	AddSpriteAnimationFrame(3,4) 
@@ -134,14 +110,11 @@ function exibirConteudo()
 	PlaySprite(3)
 	PlaySprite(4)
 	
-	
-	
 	//SETA POSIÇÃO DOS SPRITES
 	SetSpritePosition(3,100,100)
 	SetSpritePosition(4,200,100)
 	SetSpritePosition(5,300,100)
 	SetSpritePosition(6,100,550)
-	
 	
 	//ADICIONA E INICIA MUSIC
 	LoadMusicOGG(1,"musica1.ogg")
